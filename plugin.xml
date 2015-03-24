@@ -54,13 +54,18 @@
 
   <!-- windows -->
   <platform name="windows">
-    <config-file target="config.xml" parent="/*">
+    <!--config-file target="config.xml" parent="/*">
       <feature name="GinsbergPlugin">
         <param name="windows-package" value="GinsbergPlugin"/>
       </feature>
     </config-file>
     
-    <source-file src="src/windows/GinsbergPlugin.cs" />
+    <source-file src="src/windows/GinsbergPlugin.cs" /-->
+	
+	<js-module src="src/windows/GinsbergPluginProxy.js" name="GinsbergPluginProxy">
+		<merges target="" />
+	</js-module>
+
 	<!--js-module src="src/windows/echopluginProxy.js" name="EchoProxy">
 		<merges target="" />
 	</js-module>
