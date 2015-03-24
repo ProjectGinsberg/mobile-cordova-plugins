@@ -14,6 +14,12 @@ module.exports = {
             errorCallback(upperCase);
         }
 		*/
+		
+		var ex1 = GinsbergPlugin.ManagedCalls.getAnswer();
+
+		var ex2 = new SampleComponent.Example();
+
+		var ex3 = ex.sampleProperty;
     }
 };
 
