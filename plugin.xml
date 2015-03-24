@@ -13,7 +13,7 @@
 	<keywords>phonegap,windows,phone,ginsberg,scotgov,ginsbergplugin</keywords>
 
 	<js-module src="www/ginsbergplugin.js" name="GinsbergPlugin">
-	  <merges target="window.GinsbergPlugin" />
+	  <merges target="window.plugins.ginsberg" />
 	</js-module>
 	
 	<!-- android -->
