@@ -32,6 +32,8 @@
         <js-module src="src/windows/GinsbergPluginProxy.js" name="GinsbergPluginProxy">
             <clobbers target="window.plugins.ginsberg" />
         </js-module>
+		<!--framework src="src/windows/EchoRuntimeComponent.winmd" custom="true"/-->
+		<framework src="src/windows/GinsbergPluginComponent/GinsbergPluginComponent.csprog" custom="true" type="projectReference"/>
     </platform>
   
 </plugin>

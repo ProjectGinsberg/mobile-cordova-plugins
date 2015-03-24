@@ -1,5 +1,5 @@
 var cordova = require('cordova'),
-    GinsbergPlugin= require('./GinsbergPlugin');
+    GinsbergPlugin = require('./GinsbergPlugin');
 
 module.exports = {
 
@@ -15,11 +15,11 @@ module.exports = {
         }
 		*/
 		
-		var ex1 = GinsbergPlugin.ManagedCalls.getAnswer();
+		var ex1 = GinsbergPluginComponent.ManagedCalls.getAnswer();
 
-		var ex2 = new SampleComponent.Example();
+		//var ex2 = new SampleComponent.Example();
 
-		var ex3 = ex.sampleProperty;
+		var ex3 = ex1.sampleProperty;
     }
 };
 
