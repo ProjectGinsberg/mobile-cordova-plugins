@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
-           id="com.scotgov.ginsbergplugin"
+           id="com.scotgov.GinsbergPlugin"
       version="1.0.0">
 
     <name>GinsbergPlugin</name>
@@ -9,68 +9,30 @@
 	<description>
 			General PhoneGap plugin to fill in missing Windows 8 Universal functionality.
 	</description>
-	<license></license>
+	<license>MIT</license>
 	<keywords>phonegap,windows,phone,ginsberg,scotgov,ginsbergplugin</keywords>
 
-	<js-module src="www/ginsbergplugin.js" name="GinsbergPlugin">
-	  <merges target="window.plugins.ginsberg" />
+	<js-module src="www/GinsbergPlugin.js" name="GinsbergPlugin">
+	  <clobbers target="GinsbergPlugin" />
 	</js-module>
 	
-	<!-- android -->
-    <!--platform name="android">
-        <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="SpinnerDialog">
-                <param name="android-package" value="hu.dpal.phonegap.plugins.SpinnerDialog"/>
+	 <!-- wp8 -->
+    <platform name="wp8">
+        <config-file target="config.xml" parent="/*">
+            <feature name="GinsbergPlugin">
+                <param name="wp-package" value="GinsbergPlugin"/>
             </feature>
         </config-file>
-        
-        <source-file src="src/android/SpinnerDialog.java" target-dir="src/hu/dpal/phonegap/plugins" />
-        <source-file src="src/android/CallbackProgressDialog.java" target-dir="src/hu/dpal/phonegap/plugins" />
-        
-    </platform-->
 
-	<!-- ios -->
-	<!--platform name="ios">
-	  <config-file target="config.xml" parent="/*">
-		<feature name="SpinnerDialog">
-		  <param name="ios-package" value="CDVSpinnerDialog"/>
-		</feature>
-	  </config-file>
+        <source-file src="src/wp/GinsbergPlugin.cs" />
+    </platform>
 
-	  <header-file src="src/ios/CDVSpinnerDialog.h" />
-	  <source-file src="src/ios/CDVSpinnerDialog.m" />
-	</platform-->
-
-  <!-- wp8 -->
-  <!--platform name="wp8">
-    <config-file target="config.xml" parent="/*">
-      <feature name="SpinnerDialog">
-        <param name="wp-package" value="SpinnerDialog"/>
-      </feature>
-    </config-file>
-    
-    <source-file src="src/wp/SpinnerDialog.cs" />
-  </platform-->
-
-  <!-- windows -->
-  <platform name="windows">
-    <!--config-file target="config.xml" parent="/*">
-      <feature name="GinsbergPlugin">
-        <param name="windows-package" value="GinsbergPlugin"/>
-      </feature>
-    </config-file>
-    
-    <source-file src="src/windows/GinsbergPlugin.cs" /-->
-	
-	<js-module src="src/windows/GinsbergPluginProxy.js" name="GinsbergPluginProxy">
-		<merges target="" />
-	</js-module>
-
-	<!--js-module src="src/windows/echopluginProxy.js" name="EchoProxy">
-		<merges target="" />
-	</js-module>
-	<framework src="src/windows/EchoRuntimeComponent.winmd" custom="true"/-->
-  </platform>
+    <!-- windows -->
+    <platform name="windows">
+        <js-module src="src/windows/GinsbergPluginProxy.js" name="GinsbergPluginProxy">
+            <merges target="" />
+        </js-module>
+    </platform>
   
 </plugin>
 
