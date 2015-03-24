@@ -4,7 +4,7 @@ namespace WPCordovaClassLib.Cordova.Commands
 {
     public class GinsbergPlugin : BaseCommand
     {
-        public void show(string truth)
+        public void showy(string truth)
         {
 			Console.Write("we3f");
 			/*

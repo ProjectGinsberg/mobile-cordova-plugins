@@ -3,7 +3,7 @@ var cordova = require('cordova'),
 
 module.exports = {
 
-    show: function (successCallback, errorCallback, strInput) {
+    showy: function (successCallback, errorCallback, strInput) {
 		console.log("sdgsg");
 		/*
         var upperCase = strInput[0].toUpperCase();
