@@ -29,9 +29,13 @@
 
     <!-- windows -->
     <platform name="windows">
-        <js-module src="src/windows/GinsbergPluginProxy.js" name="GinsbergPluginProxy">
-            <merges target="" />
-        </js-module>
+        <config-file target="config.xml" parent="/*">
+            <feature name="GinsbergPlugin">
+                <param name="windows-package" value="GinsbergPlugin"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/windows/GinsbergPlugin.cs" />
     </platform>
   
 </plugin>
