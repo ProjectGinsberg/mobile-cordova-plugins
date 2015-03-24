@@ -12,8 +12,8 @@
 	<license>MIT</license>
 	<keywords>phonegap,windows,phone,ginsberg,scotgov,ginsbergplugin</keywords>
 
-	<js-module src="www/GinsbergPlugin.js" name="GinsbergPlugin">
-	  <clobbers target="GinsbergPlugin" />
+	<js-module src="www/ginsbergplugin.js" name="GinsbergPlugin">
+	  <clobbers target="window.plugins.ginsberg" />
 	</js-module>
 	
 	 <!-- wp8 -->
@@ -29,13 +29,9 @@
 
     <!-- windows -->
     <platform name="windows">
-        <config-file target="config.xml" parent="/*">
-            <feature name="GinsbergPlugin">
-                <param name="windows-package" value="GinsbergPlugin"/>
-            </feature>
-        </config-file>
-
-        <source-file src="src/windows/GinsbergPlugin.cs" />
+        <js-module src="src/windows/GinsbergPluginProxy.js" name="GinsbergPluginProxy">
+            <clobbers target="window.plugins.ginsberg" />
+        </js-module>
     </platform>
   
 </plugin>
