@@ -38,7 +38,7 @@ function hexToRgb(hex) {
 
 module.exports = {
     _ready: function(win, fail) {
-        win(statusBar.occludedRect.height !== 0);
+			true;//win(statusBar.occludedRect.height !== 0);
     },
 
     overlaysWebView: function () {
@@ -85,4 +85,4 @@ module.exports = {
     }
 };
 
-require("cordova/exec/proxy").add("StatusBar", module.exports);
+require("cordova/exec/proxy").add("GinsbergPlugin", module.exports);
