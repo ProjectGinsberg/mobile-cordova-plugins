@@ -56,7 +56,7 @@
   <platform name="windows">
     <config-file target="config.xml" parent="/*">
       <feature name="GinsbergPlugin">
-        <param name="wp-package" value="GinsbergPlugin"/>
+        <param name="windows-package" value="GinsbergPlugin"/>
       </feature>
     </config-file>
     
