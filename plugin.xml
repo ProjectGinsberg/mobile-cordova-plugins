@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
-           id="com.scotgov.GinsbergPlugin"
+           id="com.scotgov.ginsbergplugin"
       version="1.0.0">
 
     <name>GinsbergPlugin</name>
@@ -12,7 +12,7 @@
 	<license>MIT</license>
 	<keywords>phonegap,windows,phone,ginsberg,scotgov,ginsbergplugin</keywords>
 
-	<js-module src="www/ginsbergplugin.js" name="GinsbergPlugin">
+	<js-module src="www/GinsbergPlugin.js" name="GinsbergPlugin">
 	  <clobbers target="window.plugins.ginsberg" />
 	</js-module>
 	
@@ -27,13 +27,22 @@
         <source-file src="src/wp/GinsbergPlugin.cs" />
     </platform>
 
+    <!-- windows8 -->
+    <platform name="windows8">
+        <js-module src="src/windows/GinsbergPluginProxy.js" name="GinsbergPluginProxy">
+             <merges target="" />
+        </js-module>
+		<!--framework src="src/windows/EchoRuntimeComponent.winmd" custom="true"/-->
+		<framework src="src/windows/GinsbergPluginComponent/GinsbergPluginComponent.csproj" custom="true" type="projectReference"/>
+    </platform>
+  
     <!-- windows -->
     <platform name="windows">
         <js-module src="src/windows/GinsbergPluginProxy.js" name="GinsbergPluginProxy">
-            <clobbers target="window.plugins.ginsberg" />
+             <merges target="" />
         </js-module>
 		<!--framework src="src/windows/EchoRuntimeComponent.winmd" custom="true"/-->
-		<framework src="src/windows/GinsbergPluginComponent/GinsbergPluginComponent.csprog" custom="true" type="projectReference"/>
+		<framework src="src/windows/GinsbergPluginComponent/GinsbergPluginComponent.csproj" custom="true" type="projectReference"/>
     </platform>
   
 </plugin>
