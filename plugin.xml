@@ -1,32 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
-
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+<plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
            id="com.scotgov.ginsbergplugin"
-      version="0.1.0">
+      version="1.0.0">
+
     <name>GinsbergPlugin</name>
+    
+	<description>
+			General PhoneGap plugin to fill in missing Windows 8 Universal functionality.
+	</description>
+	<license>MIT</license>
+	<keywords>phonegap,windows,phone,ginsberg,scotgov,ginsbergplugin</keywords>
 
+	<js-module src="www/ginsbergplugin.js" name="GinsbergPlugin">
+	  <clobbers target="window.plugins.ginsberg" />
+	</js-module>
+	
+	<!-- platform name="wp8">
+        <config-file target="config.xml" parent="/*">
+            <feature name="GinsbergPlugin">
+                <param name="wp-package" value="GinsbergPlugin"/>
+            </feature>
+        </config-file>
 
-    <description>Echo demo plugin for Apache Cordova</description>
-    <license>MIT</license>
-    <keywords></keywords>
-    <repo></repo>
-    <issue></issue>
+        <source-file src="src/wp/GinsbergPlugin.cs" />
+    </platform>
 
-    <js-module src="www/ginsbergplugin.js" name="ginsbergplugin">
-        <clobbers target="window.ginsbergplugin" />
-    </js-module>
-
-    <!-- windows8 -->
     <platform name="windows8">
+        <js-module src="src/windows/GinsbergPluginProxy.js" name="GinsbergPluginProxy">
+             <merges target="" />
+        </js-module>
+		<framework src="src/windows/GinsbergPluginComponent/GinsbergPluginComponent.csproj" custom="true" type="projectReference"/>
+    </platform>
+	
+	<platform name="windows8">
         <js-module src="src/windows/ginsbergpluginProxy.js" name="GinsbergProxy">
             <merges target="" />
         </js-module>
-        <!--<framework src="src/windows8/EchoRuntimeComponent.winmd" custom="true"/> -->
-	   <framework src="src/windows/GinsbergPluginComponent/GinsbergPluginComponent.winmd" custom="true"/>	   
-       <!--framework src="WinRTCproj/EchoRuntimeComponent.vcxproj" custom="true" type="projectReference"/-->
-	   <!--framework src="src/windows/GinsbergPluginComponent/GinsbergPluginComponent.csproj" custom="true" type="projectReference"/-->	   
-    </platform>
+       <framework src="src/windows/GinsbergPluginComponent/GinsbergPluginComponent.winmd" custom="true"/>	   
+    </platform-->
         
+  
+    <platform name="windows">
+        <js-module src="src/windows/ginsbergpluginProxy.js" name="GinsbergPluginProxy">
+             <merges target="" />
+        </js-module>
+		<!--framework src="src/windows/EchoRuntimeComponent.winmd" custom="true"/-->
+	   <framework src="src/windows/GinsbergPluginComponent/GinsbergPluginComponent.winmd" custom="true"/>	   
+       <!--framework src="src/windows/GinsbergPluginComponent/GinsbergPluginComponent.csproj" custom="true" type="projectReference"/-->
+    </platform>
+  
 </plugin>
+
