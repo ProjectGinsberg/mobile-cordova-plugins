@@ -24,7 +24,7 @@
             <merges target="" />
         </js-module>
         <!--<framework src="src/windows8/EchoRuntimeComponent.winmd" custom="true"/> -->
-       <framework src="WinRTCproj/EchoRuntimeComponent.vcxproj" custom="true" type="projectReference"/>
+       <framework src="src\windows\GinsbergPluginComponent\GinsbergPluginComponent.csproj" custom="true" type="projectReference"/>
     </platform>
         
 </plugin>
