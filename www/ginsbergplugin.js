@@ -1,6 +1,6 @@
 var GinsbergPlugin = {
-    showy: function (successCallback, errorCallback, strInput) {
-        cordova.exec(successCallback, errorCallback, "GinsbergPlugin", "showy", [strInput]);
+    exitApp: function (successCallback, errorCallback) {
+        cordova.exec(successCallback, errorCallback, "GinsbergPlugin", "exitApp", []);
     }
 }
 
