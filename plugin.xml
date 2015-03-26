@@ -16,38 +16,12 @@
 	  <clobbers target="window.plugins.ginsberg" />
 	</js-module>
 	
-	<!-- platform name="wp8">
-        <config-file target="config.xml" parent="/*">
-            <feature name="GinsbergPlugin">
-                <param name="wp-package" value="GinsbergPlugin"/>
-            </feature>
-        </config-file>
-
-        <source-file src="src/wp/GinsbergPlugin.cs" />
-    </platform>
-
-    <platform name="windows8">
-        <js-module src="src/windows/GinsbergPluginProxy.js" name="GinsbergPluginProxy">
-             <merges target="" />
-        </js-module>
-		<framework src="src/windows/GinsbergPluginComponent/GinsbergPluginComponent.csproj" custom="true" type="projectReference"/>
-    </platform>
-	
-	<platform name="windows8">
-        <js-module src="src/windows/ginsbergpluginProxy.js" name="GinsbergProxy">
-            <merges target="" />
-        </js-module>
-       <framework src="src/windows/GinsbergPluginComponent/GinsbergPluginComponent.winmd" custom="true"/>	   
-    </platform-->
-        
-  
     <platform name="windows">
         <js-module src="src/windows/ginsbergpluginProxy.js" name="GinsbergPluginProxy">
              <merges target="" />
         </js-module>
-		<!--framework src="src/windows/EchoRuntimeComponent.winmd" custom="true"/-->
-	   <framework src="src/windows/GinsbergPluginComponent/GinsbergPluginComponent.winmd" custom="true"/>	   
-       <!--framework src="src/windows/GinsbergPluginComponent/GinsbergPluginComponent.csproj" custom="true" type="projectReference"/-->
+	    <framework src="src/windows/GinsbergPluginComponent/GinsbergPluginComponent.winmd" custom="true"/>	   
+        <!--NOT SUPPORTED AT MOMENT: framework src="src/windows/GinsbergPluginComponent/GinsbergPluginComponent.csproj" custom="true" type="projectReference"/-->
     </platform>
   
 </plugin>
